@@ -20,9 +20,13 @@
         font-size: 110%;
     }
 
-    table.category, table.subcategory {
-        width: 100%;
+    table {
         border-collapse: collapse;
+        width: auto;
+    }
+
+    table.category, table.subcategory, table.ex {
+        width: 100%;
         border-radius: 15px 15px 0 0;
     }
 
@@ -34,15 +38,26 @@
         font-weight: bold;
     }
 
+    table.ex tr.header td {
+        width: 100%;
+        border-radius: 15px 15px 0 0 !important;
+        /*padding: 10px 0 5px 10px;*/
+        font-weight: bold;
+    }
+
     table.category tr.header td {
         background: #FF5733;
     }
 
     table.subcategory tr.header td {
-        background: #0C0 !important;
+        background: #4dff4d !important;
     }
 
-    table.category tr.body td, table.subcategory tr.body td {
+    table.ex tr.header td {
+        background: #4dff4d !important;
+    }
+
+    table.category tr.body td.h, table.subcategory tr.body td.h {
         width: 100%;
         border-radius: 0 0 15px 15px;
         padding: 10px 20px;
@@ -53,6 +68,10 @@
     }
 
     table.subcategory tr.body td {
+        background: #A8FAB6;
+    }
+
+    table.ex tr.body td {
         background: #A8FAB6;
     }
 
@@ -78,7 +97,7 @@
 
 <table class="category">
     <tr class="header"><td>Continut</td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         <a href="#formule-integrale">Formule integrale</a><br/>
         <a href="#formule-derivate">Formule derivate</a><br/>
         <a href="#drepte">Drepte</a><br/>
@@ -91,7 +110,7 @@
 
 <table class="category">
     <tr class="header"><td><a name="formule-integrale">Formule integrale<a/></td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         <table>
             <tr><td>`int u^n(x)*u'(x)dx = (u^(n+1)(x))/(n+1)+c, n in NN`</td></tr>
             <tr><td>`int u^r(x)*u'(x)dx = (u^(r+1)(x))/(r+1)+c, r in RR \\ {-1}, u(I) sub (0, oo)`</td></tr>
@@ -114,7 +133,7 @@
 <br/>
 <table class="category">
     <tr class="header"><td><a name="formule-derivate">Formule derivate<a/></td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         <table>
             <tr><td>`(n)' = 0, n - `constantă</td></tr>
             <tr><td>`(x)' = 1, x in RR`</tr></td>
@@ -140,7 +159,7 @@
 <br/>
 <table class="category">
     <tr class="header"><td><a name="drepte">Drepte<a/></td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         `m_(AB) = (y_A - y_B)/(x_A - x_B)` - panta dreptei<br/><br/>
         `d:y-y_o = m_d(x-x_o)` - ecuatia dreptei<br/><br/>
         ecuația dreptei `d` este `_|_` pe `AB iff m_(AB)*m_d = -1`<br/><br/>
@@ -153,15 +172,15 @@
 <br/>
 <table class="category">
     <tr class="header"><td><a name="asimptote">Asimptote<a/></td></tr>
-    <tr class="body"><td>
-        <table style="width:100%;">
+    <tr class="body"><td class="h">
+        <table>
             <tr>
-                <td style="width:20px;">`x=a`</td>
-                <td style="width:45%;">
+                <td>`x=a`</td>
+                <td>
                     asimptotă verticală la stânga `iff lim_((x -> a)/(x < a))(f(a)) = +- oo`<br/>
                     asimptotă verticală la dreapta `iff lim_((x ->a)/(x > a))(f(a)) = +- oo`<br/>
                 </td>
-                <td>`} =>` asimptotă bilaterală</td>
+                <td>`=>` asimptotă bilaterală</td>
             </tr>
         </table>
         <br/>
@@ -169,7 +188,7 @@
         `lim_(x->-oo)(f(x))=a, a != +-oo => y=a` asimptotă orizontală spre `-oo`<br/>
         <table>
             <tr>
-                <td style="width:35%;">`y=mx+n` asimptotă oblică spre `+-oo <=>`</td>
+                <td>`y=mx+n` asimptotă oblică spre `+-oo <=>`</td>
                 <td>
                     `f` nu are asimptotă spre `+-oo`<br/>
                     `m in RR`* ,`m = lim_(x->+-oo)(f(x)/x)`<br/>
@@ -182,10 +201,10 @@
 <br/>
 <table class="category">
     <tr class="header"><td><a name="matrici">Matrici<a/></td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         <table class="subcategory">
             <tr class="header"><td>Calcularea inversei</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 <div class="atentie">`det(A) != 0 => EE A^(-1)`</div><br/>
                 `A=[[x,y],[a,b]]`<br/>
                 `A^(-1)=1/det(A) * A`*<br/><br/>
@@ -198,7 +217,7 @@
         <br/>
         <table class="subcategory">
             <tr class="header"><td>Sisteme de ecuații</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 sistem incompatibil - sistemul nu are soluții (`S = O/`)<br/>
                 <table>
                     <tr>
@@ -216,7 +235,7 @@
         <br/>
         <table class="subcategory">
             <tr class="header"><td>Regula lui Cramer</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 `{[a_1*x + b_1*y + c_1*z = d1],[a_2*x + b_2*y + c_2*z = d2],[a_3*x + b_3*y + c_3*z = d3]}`
                 `A=[[a1,b1,c1],[a2,b2,c2],[a3,b3,c3]]`
             </td></tr>
@@ -226,21 +245,21 @@
 <br/>
 <table class="category">
     <tr class="header"><td><a name="polinoame">Polinoame<a/></td></tr>
-    <tr class="body"><td>
+    <tr class="body"><td class="h">
         `f = a_nx^n + a_(n-1)x^(n-1) + ... + a_1x+a_0, f in K[X] (K in {QQ,RR,CC,ZZ_p})`<br/><br/>
         <table class="subcategory">
             <tr class="header"><td>Relații între rădăcini și coeficienți</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 1.Dacă `alpha in ZZ` rădăcină a ecuației `=> alpha // a_0, a_i in ZZ, AAi`<br/><br/>
                 2.Dacă `a_i in ZZ, AAi` și `p/q` rădăcină (`p/q in QQ`) `=> p // a_0, q // a_n`<br/><br/>
                 3.Dacă `a_i in QQ, AAi` și `u = a + bsqrt(c) in RR//QQ` rădăcină `=> bar u = a-bsqrt(c)` este rădăcină și `u, bar u` au același ordin de multiplicitate<br/><br/>
-                4.Dacă `a_i in RR, AAi` și `z = a+bi in CC \\ RR` rădăcină `=> bar z = a-bi` este rădăcină și `z` și `bar z` au același ordin de multiplicitate<br/>
+                4.Dacă `a_i in RR, AAi` și `z = a+bi in CC // RR` rădăcină `=> bar z = a-bi` este rădăcină și `z` și `bar z` au același ordin de multiplicitate<br/>
             </td></tr>
         </table>
         <br/>
         <table class="subcategory">
             <tr class="header"><td>Relațiile lui Viete</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 `x_1, x_2, ..., x_n` - rădăcini<br/><br/>
                 `{[x_1 + x_2 + ... + x_n = -a_(n-1)/a_n],
                 [x_1x_2 + x_3x_4 + ... + x_(n-1)x_n = a_(n-2)/a_n],
@@ -251,11 +270,77 @@
         <br/>
         <table class="subcategory">
             <tr class="header"><td>Formule utile</td></tr>
-            <tr class="body"><td>
+            <tr class="body"><td class="h">
                 `a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab + ac + bc)`<br/><br/>
                 `a^3 + b^2 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2 - ab-ac-bc)`
             </td></tr>
         </table>
+        </br>
+        <table class="subcategory">
+            <tr class="header"><td>Exerciții rezolvate</td></tr>
+            <tr class="body"><td class="h">
+                <ul>
+                    <li><a href="#sub2ex1000">Se consideră `alpha in RR` și polinomul `f = X^3 + (1-alpha)X^2 + (alpha-2)iX + alpha + (alpha-2)i in CC[X]`.<br/>
+                        a) Arătați că funcția f este strict descrescătoare pe `(1, oo)`<br/>
+                        b) Arătați că, dacă `p`, `q` sunt numere complexe și polinomul `g = X^2 + pX + q in CC[X]` are două rădăcini nereale distincte, complex conjugate, atunci `p` și `q` sunt numere reale și `p^2 < 4q`<br/>
+                        c) Determinați `alpha in CC` pentru care polinomul `f` are două rădăcini distincte, complex conjugate.</a></li>
+                </ul>
+            </td></tr>
+        </table>
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="sub2">Subiectul II<a/></td></tr>
+    <tr class="body"><td class="h">
+        <table class="ex">
+            <tr class="header"><td><a name="sub2ex1000">Se consideră `alpha in RR` și polinomul `f = X^3 + (1-alpha)X^2 + (alpha-2)iX + alpha + (alpha-2)i in CC[X]`.<br/>
+                a) Arătați că funcția f este strict descrescătoare pe `(1, oo)`<br/>
+                b) Arătați că, dacă `p`, `q` sunt numere complexe și polinomul `g = X^2 + pX + q in CC[X]` are două rădăcini nereale distincte, complex conjugate, atunci `p` și `q` sunt numere reale și `p^2 < 4q`<br/>
+                c) Determinați `alpha in CC` pentru care polinomul `f` are două rădăcini distincte, complex conjugate.</a></td></tr>
+            <tr class="body"><td class="h">
+                b) `g` are doua radacini complex conjugate `=> x_1=a+ib; x_2=a-ib, a,b in RR`<br/><br/>
+                <table>
+                    <tr>
+                        <td>Relatiile lui Viete</td>
+                        <td>`{[x_1+x_2 = -p],[x_1x_2 = q]}`</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style="vertical-align:top">`x_1+x_2 <=> a+ib + a-ib = -p <=>`</td>
+                        <td>`2a = -p`<br/>
+                            `a in RR`
+                        </td>
+                        <td>`=> p in RR`</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style="vertical-align:top">`x_1x_2 <=> (a+ib)(a-ib) = q <=>`</td>
+                        <td>`a^2 + b^2 = q`<br/>
+                            `a,b in RR`
+                        </td>
+                        <td>`=> q in RR`</td>
+                    </tr>
+                </table>
+                `g = X^2 + pX + q` are radacini complexe daca `Delta < 0`<br/>
+                <table>
+                    <tr>
+                        <td>`Delta = p^2 - 4q`<br/>
+                            `Delta < 0`</td>
+                        <td>`=> p^2 - 4q < 0 => p^2 < 4q`</td>
+                    </tr>
+                </table>
+                <br/>
+                c) Din a) `=> x = -1` radacina `=> (X-1) // f => f = (X-1)(X^2 - alphaX + alpha + (alpha-2)i)`<br/>
+                Polinomul f are două rădăcini complexe conjugate dacă `X^2 - alphaX + alpha + (alpha-2)i` are două rădăcini complexe conjugate.<br/>
+                Din b) `=> alpha in RR, alpha + (alpha-2)i in RR`<br/>
+                `alpha + (alpha-2)i in RR => (alpha-2)i = 0 => alpha = 2`<br/>
+                `alpha = 2 => Delta = 2^2 - 4*2 = -4 < 0 =>` polinomul f are două rădăcini complexe conjugate.
+            </td></tr>
+        </table>
+        <br/>
     </td></tr>
 </table>
 <br/>
