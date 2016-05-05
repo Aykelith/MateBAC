@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="MathJax/MathJax.js?config=AM_HTMLorMML-full"></script>
+
+    <script type="text/javascript">
+        MathJax.Hub.Config({
+            "HTML-CSS": { scale: 120},
+            menuSettings: { zoom: "Double-Click" }
+        });
+    </script>
+
+    <style type="text/css">
+    body {
+        background: #FFC300;
+        font-size: 110%;
+    }
+
+    table.category, table.subcategory {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 15px 15px 0 0;
+    }
+
+    table.category tr.header td, table.subcategory tr.header td {
+        width: 100%;
+        border-radius: 15px 15px 0 0 !important;
+        padding: 10px 0 5px 10px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    table.category tr.header td {
+        background: #FF5733;
+    }
+
+    table.subcategory tr.header td {
+        background: #0C0 !important;
+    }
+
+    table.category tr.body td, table.subcategory tr.body td {
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 10px 20px;
+    }
+
+    table.category tr.body td {
+        background: #DAF7A6;
+    }
+
+    table.subcategory tr.body td {
+        background: #A8FAB6;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    div.atentie {
+        padding: 5px;
+        background-color: #F08F8F;
+        border-radius: 15px;
+    }
+
+    div.moreinfo {
+        padding: 5px;
+        background-color: #BFF974;
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+
+<table class="category">
+    <tr class="header"><td>Continut</td></tr>
+    <tr class="body"><td>
+        <a href="#formule-integrale">Formule integrale</a><br/>
+        <a href="#formule-derivate">Formule derivate</a><br/>
+        <a href="#drepte">Drepte</a><br/>
+        <a href="#asimptote">Asimptote</a><br/>
+        <a href="#matrici">Matrici</a><br/>
+        <a href="#polinoame">Polinoame</a><br/>
+    </td></tr>
+</table>
+<br/>
+
+<table class="category">
+    <tr class="header"><td><a name="formule-integrale">Formule integrale<a/></td></tr>
+    <tr class="body"><td>
+        <table>
+            <tr><td>`int u^n(x)*u'(x)dx = (u^(n+1)(x))/(n+1)+c, n in NN`</td></tr>
+            <tr><td>`int u^r(x)*u'(x)dx = (u^(r+1)(x))/(r+1)+c, r in RR \\ {-1}, u(I) sub (0, oo)`</td></tr>
+            <tr><td>`int a^(u(x))*u'(x)dx = (a^(u(x)))/ln(a)+c, a in (0, oo) \\ {1}`</td></tr>
+            <tr><td>`int (u'(x))/(u(x))dx = ln|\u(x)|+c, u(x) != 0, x in I`</td></tr>
+            <tr><td>`int (u'(x))/(u^2(x)-a^2)dx = 1/(2a)*ln|\(u(x)-a)/(u(x)+a)|+c, u(x) != +-a, AA x in I, a != 0`</td></tr>
+            <tr><td>`int (u'(x))/(u^2(x)+a^2)dx = 1/a*arctg((u(x))/a)+c, a != 0`</td></tr>
+            <tr><td>`int sin(u(x))*u'(x)dx = -cos(u(x))+c`</td></tr>
+            <tr><td>`int cos(u(x))*u'(x)dx = sin(u(x))+c`</td></tr>
+            <tr><td>`int tg(u(x))*u'(x)dx = -ln|\cos(u(x))|+c, u(x) != (2k+1)*pi/2, k in ZZ, x in I`</td></tr>
+            <tr><td>`int ctg(u(x))*u'(x)dx = ln|\sin(u(x))|+c, u(x) != k*pi, k in ZZ, x in I`</td></tr>
+            <tr><td>`int (u'(x))/(cos^2u(x))dx = tg(u(x))+c, u(x) != (2k+1)*pi/2, k in ZZ, x in I`</td></tr>
+            <tr><td>`int (u'(x))/(sin^2u(x))dx = -ctg(u(x))+c, u(x) != k*pi, k in ZZ, x in I`</td></tr>
+            <tr><td>`int (u'(x))/(sqrt(a^2-u^2(x)))dx = arcsin((u(x))/a)+c, a>0, u(I) sub (-a, a)`</td></tr>
+            <tr><td>`int (u'(x))/(sqrt(u^2(x)-a^2))dx = ln|\u(x)+sqrt(u^2(x)-a^2)|+c, a>0, u(I) sub (-oo, -a)uu(a, oo)`</td></tr>
+            <tr><td>`int (u'(x))/(sqrt(u^2(x)+a^2))dx = ln|\u(x)+sqrt(u^2(x)+a^2)|+c, a != 0`</td></tr>
+        </table>
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="formule-derivate">Formule derivate<a/></td></tr>
+    <tr class="body"><td>
+        <table>
+            <tr><td>`(n)' = 0, n - `constantă</td></tr>
+            <tr><td>`(x)' = 1, x in RR`</tr></td>
+            <tr><td>`(u^n)' = n*u^(n-1)*u', n in NN`*</tr></td>
+            <tr><td>`(u^r)' = r*u^(r-1)*u', r in RR`</tr></td>
+            <tr><td>`(sqrt(u))' = 1/(2sqrt(u))*u'`</tr></td>
+            <tr><td>`(root(n)(u))' = 1/(n*root(n)(u^(n-1)))*u'`</tr></td>
+            <tr><td>`(ln(u))' = 1/u*u'`</tr></td>
+            <tr><td>`(log_(a)(u))' = 1/(u*ln(a))*u'`</tr></td>
+            <tr><td>`(e^u)' = e^u*u'`</tr></td>
+            <tr><td>`(a^u)' = a^u*ln(a)*u'`</tr></td>
+            <tr><td>`(sin(u))' = cos(u)*u'`</tr></td>
+            <tr><td>`(cos(u))' = -sin(u)*u'`</tr></td>
+            <tr><td>`(tg(u))' = 1/(cos^2(u))*u'`</tr></td>
+            <tr><td>`(ctg(u))' = -1/(sin^2(u))*u'`</tr></td>
+            <tr><td>`(arcsin(u))' = 1/(sqrt(1-u^2))*u'`</tr></td>
+            <tr><td>`(arccos(u))' = -1/(sqrt(1-u^2))*u'`</tr></td>
+            <tr><td>`(arctg(u))' = 1/(1+u^2)*u'`</tr></td>
+            <tr><td>`(arctg(u))' = -1/(1+u^2)*u'`</tr></td>
+        </table>
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="drepte">Drepte<a/></td></tr>
+    <tr class="body"><td>
+        `m_(AB) = (y_A - y_B)/(x_A - x_B)` - panta dreptei<br/><br/>
+        `d:y-y_o = m_d(x-x_o)` - ecuatia dreptei<br/><br/>
+        ecuația dreptei `d` este `_|_` pe `AB iff m_(AB)*m_d = -1`<br/><br/>
+        `m_d=-a/b, d:ax+by+c=0`<br/><br/>
+        `d_1` || `d_2 <=> m_1 = m_2`<br/><br/>
+        ecuația dreptei determinată de 2 puncte: `d:(x-x_A)/(x_B-x_A)=(y-y_A)/(y_B-y_A)`<br/><br/>
+        distanța de la un punct la o dreaptă: `d(A, d)=(|\a*x_A+b*y_A+c|)/sqrt(a^2+b^2)`
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="asimptote">Asimptote<a/></td></tr>
+    <tr class="body"><td>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:20px;">`x=a`</td>
+                <td style="width:45%;">
+                    asimptotă verticală la stânga `iff lim_((x -> a)/(x < a))(f(a)) = +- oo`<br/>
+                    asimptotă verticală la dreapta `iff lim_((x ->a)/(x > a))(f(a)) = +- oo`<br/>
+                </td>
+                <td>`} =>` asimptotă bilaterală</td>
+            </tr>
+        </table>
+        <br/>
+        `lim_(x->+oo)(f(x))=a, a != +-oo => y=a` asimptotă orizontală spre `+oo`<br/>
+        `lim_(x->-oo)(f(x))=a, a != +-oo => y=a` asimptotă orizontală spre `-oo`<br/>
+        <table>
+            <tr>
+                <td style="width:35%;">`y=mx+n` asimptotă oblică spre `+-oo <=>`</td>
+                <td>
+                    `f` nu are asimptotă spre `+-oo`<br/>
+                    `m in RR`* ,`m = lim_(x->+-oo)(f(x)/x)`<br/>
+                    `n in RR, n=lim_(x->+-oo)(f(x)-mx)`
+                </td>
+            </tr>
+        </table>
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="matrici">Matrici<a/></td></tr>
+    <tr class="body"><td>
+        <table class="subcategory">
+            <tr class="header"><td>Calcularea inversei</td></tr>
+            <tr class="body"><td>
+                <div class="atentie">`det(A) != 0 => EE A^(-1)`</div><br/>
+                `A=[[x,y],[a,b]]`<br/>
+                `A^(-1)=1/det(A) * A`*<br/><br/>
+                <div class="moreinfo">
+                    `A^t=[[x,a],[y,b]]` - transpusa matricei<br/><br/>
+                    `A`*`=[[(-1)^(1+1)*b, (-1)^(1+2)*y],[(-1)^(2+1)*a, (-1)^(2+2)*x]]`
+                </div>
+            </td></tr>
+        </table>
+        <br/>
+        <table class="subcategory">
+            <tr class="header"><td>Sisteme de ecuații</td></tr>
+            <tr class="body"><td>
+                sistem incompatibil - sistemul nu are soluții (`S = O/`)<br/>
+                <table>
+                    <tr>
+                        <td style="width:20%;">sistem compatibil</td>
+                        <td>
+                            determinat - are o soluție<br/>
+                            nedeterminat - are mai multe soluții
+                        </td>
+                    </tr>
+                </table><br/>
+                `{[a], [b]}`
+
+            </td></tr>
+        </table>
+        <br/>
+        <table class="subcategory">
+            <tr class="header"><td>Regula lui Cramer</td></tr>
+            <tr class="body"><td>
+                `{[a_1*x + b_1*y + c_1*z = d1],[a_2*x + b_2*y + c_2*z = d2],[a_3*x + b_3*y + c_3*z = d3]}`
+                `A=[[a1,b1,c1],[a2,b2,c2],[a3,b3,c3]]`
+            </td></tr>
+        </table>
+    </td></tr>
+</table>
+<br/>
+<table class="category">
+    <tr class="header"><td><a name="polinoame">Polinoame<a/></td></tr>
+    <tr class="body"><td>
+        `f = a_nx^n + a_(n-1)x^(n-1) + ... + a_1x+a_0, f in K[X] (K in {QQ,RR,CC,ZZ_p})`<br/><br/>
+        <table class="subcategory">
+            <tr class="header"><td>Relații între rădăcini și coeficienți</td></tr>
+            <tr class="body"><td>
+                1.Dacă `alpha in ZZ` rădăcină a ecuației `=> alpha // a_0, a_i in ZZ, AAi`<br/><br/>
+                2.Dacă `a_i in ZZ, AAi` și `p/q` rădăcină (`p/q in QQ`) `=> p // a_0, q // a_n`<br/><br/>
+                3.Dacă `a_i in QQ, AAi` și `u = a + bsqrt(c) in RR//QQ` rădăcină `=> bar u = a-bsqrt(c)` este rădăcină și `u, bar u` au același ordin de multiplicitate<br/><br/>
+                4.Dacă `a_i in RR, AAi` și `z = a+bi in CC \\ RR` rădăcină `=> bar z = a-bi` este rădăcină și `z` și `bar z` au același ordin de multiplicitate<br/>
+            </td></tr>
+        </table>
+        <br/>
+        <table class="subcategory">
+            <tr class="header"><td>Relațiile lui Viete</td></tr>
+            <tr class="body"><td>
+                `x_1, x_2, ..., x_n` - rădăcini<br/><br/>
+                `{[x_1 + x_2 + ... + x_n = -a_(n-1)/a_n],
+                [x_1x_2 + x_3x_4 + ... + x_(n-1)x_n = a_(n-2)/a_n],
+                [...],
+                [x_1x_2*...*x_n = (-1)^n*a_0/a_n]}`
+            </td></tr>
+        </table>
+        <br/>
+        <table class="subcategory">
+            <tr class="header"><td>Formule utile</td></tr>
+            <tr class="body"><td>
+                `a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab + ac + bc)`<br/><br/>
+                `a^3 + b^2 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2 - ab-ac-bc)`
+            </td></tr>
+        </table>
+    </td></tr>
+</table>
+<br/>
+</body>
+</html>
